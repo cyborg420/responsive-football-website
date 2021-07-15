@@ -18,7 +18,7 @@ body {
 }
 .half-width {
     width: 50%;
-    padding-left: 5%;
+    /* padding-left: 5%; */
 }
 .conmebol-title {
     color: white;
@@ -54,11 +54,13 @@ main {
 }
 .top-players-container {
     background-color: #FFFFFF;
-    width: 1050px;
     padding: 30px;
     border-radius: 5px;
-    margin-top: 21px;
-    
+    margin-top: 21px; 
+    margin-bottom: 70px; 
+}
+.top-players {
+    margin: auto;
 }
 .players {
     display: grid;
@@ -69,6 +71,7 @@ main {
 .player {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 330px;
     height: 474px;
@@ -128,20 +131,38 @@ i {
       Media Query 
    ------------------ */
 
-   /* Mobile Devices  */
+   /*  For Mobile Devices  */
    @media only screen and (max-width:688px) {
-       .banner-container, .highlights-container {
-           display: 100%;
-           display: flex;
-           flex-direction: row;
+       .banner-container, .highlights-container, .top-players-container {
+           width: 100%;
        }
-       .top-players-container {
-           width: 90%;
+
+       .banner-container, .highlights-container {
+           display: flex;
+           flex-direction: column;
+       } 
+       .half-width {
+           width: 100%;
+           margin-bottom: 30px;
+       }
+       .half-width img {
+           width: 100%;
+           margin-top: 20px;
        }
        .players {
            grid-template-columns: repeat(1, 1fr);
+       }
+
+       .footer {
+           width: 100%;
+           display: flex;
            flex-direction: column;
            justify-content: center;
+           align-content: center;
        }
+       .footer img {
+           width: fit-content;
+       }
+
        
    }
